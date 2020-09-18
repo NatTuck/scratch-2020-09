@@ -29,9 +29,11 @@ prime(long nn)
         primes[ii] = 0;
     }
 
-    primes[0] = 2;
-    *(primes + 1) = 3;
-    2[primes] = 5;
+    // pointer + integer = pointer + (integer * sizeof(pointer_type))
+
+    primes[0] = 2;   // primes[0] => *(primes + 0)
+    *(primes + 1) = 3;  // <- this is the real mechanic
+    2[primes] = 5;   // 2[primes] => *(2 + primes)
 
     for (long ii = 3; ii < nn; ++ii) {
         long guess = *(primes + (ii - 1)) + 2;
