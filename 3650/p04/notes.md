@@ -13,23 +13,22 @@
      // Stuff that isn't in the executable file
      // but is created when the process starts
      +---------------------
-     |   stack             0x7ffc3 11d0900
-     |   (grows down)
+     |   stack
+     |   (grows down)       0x7ffd 0cde4ee0
      ...
      
      
      ...
      |   (grows up)
-     |   heap              0x55c6f 9a65260
+     |   heap             0x5577 ae16a260
      +-----------------------
      
      // Stuff we load from the executable file
       +-------------
-      |   .text            0x55c6f 89c b155
+      |   .text           0x5577 ad94 1155
       +-------------
-      |   .data            0x55c6f 89c e040
+      |   .data           0x5577 ad94 4040
       +-------------
-  
   0 GB ---------------------------
 ```
 
