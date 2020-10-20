@@ -1,0 +1,6 @@
+nush$ one
+Parent pid: 24615
+Parent knows child pid: 24616
+== executed program complete ==
+child returned with wait code 0
+child exited with exit code (or main returned) 0
