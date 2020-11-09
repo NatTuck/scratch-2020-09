@@ -1,0 +1,15 @@
+==24068== Invalid write of size 4
+==24068==    at 0x109199: icons (tools.h:14)
+==24068==    by 0x1092E0: main (03-list-sum.c:14)
+==24068==  Address 0xdeadbeef is not stack'd, malloc'd or (recently) free'd
+==24068== 
+==24068== 
+==24068== Process terminating with default action of signal 11 (SIGSEGV)
+==24068==  Access not within mapped region at address 0xDEADBEEF
+==24068==    at 0x109199: icons (tools.h:14)
+==24068==    by 0x1092E0: main (03-list-sum.c:14)
+==24068==  If you believe this happened as a result of a stack
+==24068==  overflow in your program's main thread (unlikely but
+==24068==  possible), you can try to increase the size of the
+==24068==  main thread stack using the --main-stacksize= flag.
+==24068==  The main thread stack size used in this run was 8388608.
