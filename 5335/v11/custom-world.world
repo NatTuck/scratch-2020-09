@@ -1,0 +1,17 @@
+<sdf version="1.6">
+  <world name='example1'>
+    <include>
+      <uri>model://sun</uri>
+    </include>
+
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+
+    <include>
+      <uri>model://polaris_ranger_ev</uri>
+    </include>
+  </world>
+</sdf>
+
+
