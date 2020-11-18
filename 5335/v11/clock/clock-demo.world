@@ -1,0 +1,27 @@
+<sdf version="1.6">
+  <world name='example1'>
+    <include>
+      <uri>model://sun</uri>
+    </include>
+
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+
+    <model name="cart">
+      <include>
+        <uri>model://polaris_ranger_ev</uri>
+      </include>
+
+      <link name="cart_clock">
+        <!-- this doesn't work, can't create custom sensors -->
+        <sensor name="clock1">
+          <plugin name="clock_plugin" filename="libclock_plugin.so">
+          </plugin>
+        </sensor>
+      </link>
+    </model>
+  </world>
+</sdf>
+
+
