@@ -1,0 +1,33 @@
+<sdf version="1.7">
+  <world name='example1'>
+    <include>
+      <uri>model://sun</uri>
+    </include>
+
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+
+    <model name="ranger1">
+      <include>
+        <uri>model://polaris_ranger_ev</uri>
+      </include>
+      <!--
+      <plugin name="ranger1_drive" filename="libDiffDrivePlugin.so">
+        <left_joint>ranger1::polaris_ranger_ev::rear_left_wheel_joint</left_joint>
+        <right_joint>ranger1::polaris_ranger_ev::rear_right_wheel_joint</right_joint>
+      </plugin>
+      -->
+      <plugin name="keytranslate" filename="libKeysToCmdVelPlugin.so">
+      </plugin>
+    </model>
+
+    <gui>
+      <plugin name="keypressthing"
+              filename="libKeyboardGUIPlugin.so">
+      </plugin>
+    </gui>
+  </world>
+</sdf>
+
+
