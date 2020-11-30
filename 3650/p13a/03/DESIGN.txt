@@ -1,0 +1,23 @@
+
+Two utility programs:
+
+ - mkfs - create an empty (formatted) disk image
+ - dump - show the contents of a file system disk image
+
+On disk layout:
+
+ - 1MB disk image file
+ - 4096 byte blocks, so there are 256 blocks
+ - inodes: 10 of them stored in block 0
+ - An inode is free if the mode is 0
+ - root directory is the 0th inode
+ - blocks (pages) 1..255 are data blocks
+ - root directory data block contains 10 dirents
+ - A data block is free if its first byte is 0.
+   - A used data block has a first byte of 1.
+   - That means we only have 4095 usable bytes per block.
+
+A freshly formatted disk comes with two files:
+
+ - "one.txt" => "the quick brown fox jumps over the lazy dog"
+ - "two.txt" => "hello, two"
