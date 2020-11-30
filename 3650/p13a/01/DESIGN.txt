@@ -1,0 +1,21 @@
+
+ - Filesystem in 1MB disk image file.
+ - Working with 4kB pages / blocks (256 of them).
+ - page 0 is going to contain 10 inodes (240 bytes)
+ - unused inodes have a mode of 0
+ - inode 0 is going to be the root directory
+ - Root directory contains an array of 10 dirents.
+ - Dirent unused if inum == 0
+
+Files created at format time in the root:
+
+ - "one.txt" => "this is file #1"
+ - "two.txt" => "other file"
+
+Problem: How do we know which data blocks are available?
+
+Bad solution: use the first byte of the data block to mark usedness.
+
+ - Pro: Easy
+ - Con: Max file size is now 4095 bytes; this breaks pretty bad
+        if we want multi-block files.
